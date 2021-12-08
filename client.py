@@ -42,9 +42,9 @@ def receive():
         nicknames.append(nickname)
         clients.append(client)
 
-        print(f'ye bhadwe kaa naam  {nickname} :)')
-        broadcast(f'{nickname} aagaya  '.encode('ascii'))
-        client.send('gand mara ab idhar  '.encode('ascii'))
+        print(f'Clients name is   {nickname} :)')
+        broadcast(f'{nickname} Connected '.encode('ascii'))
+        client.send('enjoy your stay on chatroom  '.encode('ascii'))
 
         thread = threading.Thread(target=handle, args=(client,))
         thread.start()
